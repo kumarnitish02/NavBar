@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Navigation Bar Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #d3d3d3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      padding: 32px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .brand {
+      color: #38bdf8;
+      font-size: 34px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #38bdf8;
+      left: 0;
+      bottom: -5px;
+    }
+
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 40px auto;
+      background: #e0f7fa;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      padding: 40px 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      color: #0f172a;
+    }
+
+    .tool-container {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .tool {
+      width: 300px;
+      text-align: center;
+    }
+
+    .tool img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .tool-description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #0f172a;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+        margin-top: 15px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .tool {
+        margin-bottom: 40px;
+      }
+
+      .tool-description {
+        font-size: 15px;
+      }
+
+      .content-wrapper {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="brand">Nitish Kumar</a>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <h1>IBM Data Science Tools</h1>
+
+    <div class="tool-container">
+      <div class="tool">
+        <a href="https://www.ibm.com/products/spss" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/en/1/1b/IBM_SPSS_v23.png" alt="IBM SPSS Logo" />
+        </a>
+        <div class="tool-description">
+          A powerful statistical analysis and predictive modeling tool used for data analysis, hypothesis testing, and machine learning. It is widely used in research, business intelligence, and social sciences.
+        </div>
+      </div>
+
+      <div class="tool">
+        <a href="https://www.ibm.com/products/db2" target="_blank">
+          <img src="https://media.securiti.ai/wp-content/uploads/2023/07/ibm-db2-logo-16-7-en.svg" alt="IBM DB2 Logo" />
+        </a>
+        <div class="tool-description">
+          A relational database management system designed for high-performance data storage and analytics. It supports AI-driven automation, scalability, and multi-cloud environments.
+        </div>
+      </div>
+
+      <div class="tool">
+        <a href="https://www.ibm.com/products/cognos-analytics" target="_blank">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKUfTYLxrI_fDApvqEK6BBBJR5CyfU5ft8xQ&s" alt="IBM Cognos Analytics Logo" />
+        </a>
+        <div class="tool-description">
+          A business intelligence and analytics platform that provides data visualization, reporting, and AI-powered insights. It helps organizations make data-driven decisions with interactive dashboards.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
